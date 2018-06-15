@@ -1,9 +1,10 @@
 .col-width(@index,@s) when (@index>0) {
     .col-width(@index - 1,@s);
     .col-@{s}-@{index} {
-        width: 100% / 10 * @index;
+        width: 100% / 12 * @index;
         float: left;
         box-sizing: border-box;
+        border: 1px solid #eee;
     }
 }
 
@@ -23,26 +24,26 @@ body {
     display: block;
     width: 100%;
 }
-.col-width(10,xs);
+.col-width(12,xs);
 @media all and (min-width:768px) {
     .container {
         width:750px;
         background-color:lightgreen;
     }   
-    .col-width(10, sm); 
+    .col-width(12, sm); 
 }
 @media all and (min-width:992px) {
     .container {
         width:970px;
         background-color:lightblue;
     }
-    .col-width(10, md)
+    .col-width(12, md)
 }
 @media all and (min-width:1200px) {
     .container {
         width:1170px;
         background-color: lavender;
     }
-    .col-width(10, lg);
+    .col-width(12, lg);
 }
 
