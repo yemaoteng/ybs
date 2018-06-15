@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'fzlt';
+    src: url('./font/_gbk-webfont.eot');
+    src: url('./font/_gbk-webfont.eot?#iefix') format('embedded-opentype'), url('./font/_gbk-webfont.woff2') format('woff2'), url('./font/_gbk-webfont.woff') format('woff'), url('./font/_gbk-webfont.ttf') format('truetype'), url('./font/_gbk-webfont.svg#fzlantinghei-el-gbkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+ *
+ *
+ */
+body {
+    margin: 0;
+    font-family: 'fzlt';
+}
+/*移动端的文字缩放问题*/
+body * {
+    -webkit-text-size-adjust: 100%;
+}
+
+/*IOS端点击高亮取消*/
+a,
+input,
+button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/*IOS端圆角取消*/
+input,
+button {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+/*PC端适配*/
+a{
+    text-decoration: none;
+    color: #000;
+}
+/*下面是生成的了*/

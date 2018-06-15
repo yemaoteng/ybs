@@ -1,0 +1,36 @@
+@import "reset.less";
+@size:2;
+.box_bj{
+    background:
+         
+        url(./images/bj_circularone.png) no-repeat center top ,
+        url(./images/bj_bottom.png) no-repeat center bottom #1f2229;
+    background-size: 100%;
+}
+.nav {
+    height: 86px / @size;
+    border-bottom: 2px / @size solid #15161a;
+    a{
+        font-size: 0; 
+        background: url(./images/icon.png) no-repeat;
+        float: left;
+        width: 38px / @size;
+        height: 40px / @size;   
+        background-size: 400px / @size;  
+        margin: 24px / @size 0 0 20px /@size;
+    }
+}
+
+@media all and (min-width:768px) {
+    @size:1;
+    .nav {
+        height: 86px / @size;
+        border: 2px / @size solid #15161a;
+        a {
+            width: 38px / @size;
+            height: 40px / @size;   
+            background-size: 400px / @size;  
+            margin: 24px / @size 0 0 20px /@size;
+        }
+    }
+}
