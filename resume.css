@@ -34,13 +34,94 @@ a {
   text-decoration: none;
   color: #000;
 }
-h1 {
+h1,
+figure {
   margin: 0;
 }
 h1 {
   font-weight: normal;
 }
+.img {
+  vertical-align: top;
+  border: none;
+}
 /*下面是生成的了*/
+/*------------------------栅格布局样式------------------------*/
+.container {
+  padding: 0 25px;
+}
+/*------------------------公用类------------------------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*------------------------xs尺寸------------------------*/
+.col-xs-1 {
+  width: 7.69230769%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-2 {
+  width: 15.38461538%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-3 {
+  width: 23.07692308%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-4 {
+  width: 30.76923077%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-5 {
+  width: 38.46153846%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-6 {
+  width: 46.15384615%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-7 {
+  width: 53.84615385%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-8 {
+  width: 61.53846154%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-9 {
+  width: 69.23076923%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-10 {
+  width: 76.92307692%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-11 {
+  width: 84.61538462%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-12 {
+  width: 92.30769231%;
+  float: left;
+  box-sizing: border-box;
+}
+.col-xs-13 {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
 .box_bj {
   background: url(images/bj_circularone.png) no-repeat center top, url(images/bj_bottom.png) no-repeat center bottom #1f2229;
   background-size: 100%;
@@ -63,8 +144,32 @@ h1 {
 }
 .self_bj {
   background: rgba(0, 0, 0, 0.2);
-  height: 500px;
 }
+.pic_box {
+  padding: 26.5px 10px 0 24px;
+}
+.self_pic {
+  padding-bottom: 10px;
+}
+.self_pic img {
+  width: 100%;
+  border: 3px solid #e16b5f;
+  border-radius: 50%;
+}
+.self_pic h1 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 38px;
+  padding-top: 41px;
+  padding-left: 12px;
+}
+.self_pic h1 span {
+  color: #e16b5f;
+  font-size: 16px;
+  line-height: 30px;
+}
+/*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
   .nav {
     height: 86px;
@@ -78,6 +183,7 @@ h1 {
     display: none;
   }
 }
+/*------------------------md尺寸------------------------*/
 @media all and (min-width: 960px) {
   .container {
     width: 960px;
@@ -104,6 +210,7 @@ h1 {
     padding-left: 55px;
   }
 }
+/*------------------------lg尺寸------------------------*/
 @media all and (min-width: 1080px) {
   .container {
     width: 1080px;
