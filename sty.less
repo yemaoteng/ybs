@@ -1,11 +1,9 @@
 .col-xs(@index) when (@index>0) {
-    .col-xs(@index-1);
     .col-xs-@{index} {
-        width: 100% / 10 * @index;
-        float: left;
-        box-sizing: border-box;  
+        width: 10%;
     }
 }
+.col-xs(10);
 body {
     margin:0;
 }
