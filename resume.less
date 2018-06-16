@@ -31,6 +31,9 @@
 }
 /*------------------------xs尺寸------------------------*/
 .col(13,13,xs);
+.xs-hidden {
+    display:none;
+}
 .box_bj{
     background:
          
@@ -41,7 +44,7 @@
 .nav {
     height: 86px / @size;
     border-bottom: 2px / @size solid #15161a;
-    a{
+    .icon{
         font-size: 0; 
         background: url(./images/icon.png) no-repeat;
         float: left;
@@ -49,9 +52,11 @@
         height: 40px / @size;   
         background-size: 400px / @size;  
         margin: 24px / @size 0 0 20px /@size;
+        display:none;
     }
     h1 {
         display: none;
+        float: left;
     }
 }
 .self_bj {
@@ -206,7 +211,7 @@
     .nav {
         height: 86px / @size;
         border: 2px / @size solid #15161a;
-        a {
+        .icon {
             width: 38px / @size;
             height: 40px / @size;   
             background-size: 400px / @size;  
@@ -218,6 +223,7 @@
         padding: 0;
     }
     .self_pic {
+        padding-top: 54px / @size;
         padding-bottom: 40px / @size;
         img {
             width: 200px;
@@ -227,8 +233,8 @@
             font-size: 48px / @size;
             line-height: 76px / @size;
             padding-left: 24px / @size;
-            padding-top: 82px / @size;
-            span {
+            padding-top: 29px / @size;
+            span { 
                 color: #e16b5f;
                 font-size: 32px / @size;
                 line-height: 61px / @size;
@@ -284,6 +290,25 @@
             padding-left: 22px / @size;    
         }
     }
+    .contact {
+        a{
+            font-size: 28px / @size;
+            line-height: 118px / @size;
+            &:first-of-type::before, &:last-of-type::before {
+                width: 60px / @size;
+                height: 60px / @size;
+                background: url(images/icon.png) no-repeat 0 -40px / @size;
+                background-size: 400px / @size;
+                margin: 31px / @size 20px / @size 0 13px / @size;
+            }
+            &:first-of-type {
+                padding-right: 64px / @size;
+            }
+            &:last-of-type::before {
+                background-position:  -60px / @size -40px / @size;
+            }
+        }
+    }
 }
 /*------------------------md尺寸------------------------*/
 @media all and (min-width:960px) {
@@ -294,8 +319,16 @@
         margin: 0 auto;
         padding: 0 ;
     }
+    .box_bj{
+        background:             
+            url(./images/big_bj.png) no-repeat center top
+            #1f2229;
+    }
     .md-hidden {
         display: none;
+    }
+    .md-visible {
+        display: block;
     }
     .self_sign {
         background: none;
@@ -400,6 +433,29 @@
             
         }
     }
+    .contact {
+        float: right;
+        padding-right: 13px;
+        margin-top: 8px;
+        a{
+            font-size: 14px;
+            line-height: 90px;
+            box-sizing: border-box;
+            &:first-of-type::before, &:last-of-type::before {
+                width: 30px;
+                height: 30px;
+                background: url(images/icon.png) no-repeat 0 -40px / 2;
+                background-size: 400px / 2;
+                margin: 31px 8px 0 34px;
+            }
+            &:first-of-type {
+                padding-right: 35px;
+            }
+            &:last-of-type::before {
+                background-position:  -60px /2 -40px / 2;
+            }
+        }
+    }
 }
 /*------------------------lg尺寸------------------------*/
 @media all and (min-width:1080px) {
@@ -429,6 +485,24 @@
             padding: 0;        
             padding-left: 12px;
             
+        }
+    }
+    .contact {
+        margin-top: 12 px;
+        a{
+            font-size: 14px;
+            &:first-of-type::before, &:last-of-type::before {
+                margin: 27px 7px 30px 38px;
+            }
+            &:first-of-type {
+                padding-right: 0px;
+            }
+            &:first-of-type::before{
+                margin-right: 4px;
+            }
+            &:last-of-type::before {
+                background-position:  -60px / 0 -40px / 0;
+            }
         }
     }
 }

@@ -128,6 +128,9 @@ ul {
   float: left;
   box-sizing: border-box;
 }
+.xs-hidden {
+  display: none;
+}
 .box_bj {
   background: url(images/bj_circularone.png) no-repeat center top, url(images/bj_bottom.png) no-repeat center bottom #1f2229;
   background-size: 100%;
@@ -136,7 +139,7 @@ ul {
   height: 43px;
   border-bottom: 1px solid #15161a;
 }
-.nav a {
+.nav .icon {
   font-size: 0;
   background: url(images/icon.png) no-repeat;
   float: left;
@@ -144,9 +147,11 @@ ul {
   height: 20px;
   background-size: 200px;
   margin: 12px 0 0 10px;
+  display: none;
 }
 .nav h1 {
   display: none;
+  float: left;
 }
 .self_bj {
   background: rgba(0, 0, 0, 0.2);
@@ -296,7 +301,7 @@ ul {
     height: 86px;
     border: 2px solid #15161a;
   }
-  .nav a {
+  .nav .icon {
     width: 38px;
     height: 40px;
     background-size: 400px;
@@ -307,6 +312,7 @@ ul {
     padding: 0;
   }
   .self_pic {
+    padding-top: 54px;
     padding-bottom: 40px;
   }
   .self_pic img {
@@ -317,7 +323,7 @@ ul {
     font-size: 48px;
     line-height: 76px;
     padding-left: 24px;
-    padding-top: 82px;
+    padding-top: 29px;
   }
   .self_pic h1 span {
     color: #e16b5f;
@@ -369,6 +375,24 @@ ul {
     line-height: 48px;
     padding: 12px 0;
     padding-left: 22px;
+  }
+  .contact a {
+    font-size: 28px;
+    line-height: 118px;
+  }
+  .contact a:first-of-type::before,
+  .contact a:last-of-type::before {
+    width: 60px;
+    height: 60px;
+    background: url(images/icon.png) no-repeat 0 -40px;
+    background-size: 400px;
+    margin: 31px 20px 0 13px;
+  }
+  .contact a:first-of-type {
+    padding-right: 64px;
+  }
+  .contact a:last-of-type::before {
+    background-position: -60px -40px;
   }
 }
 /*------------------------md尺寸------------------------*/
@@ -794,8 +818,14 @@ ul {
     margin: 0 auto;
     padding: 0 ;
   }
+  .box_bj {
+    background: url(images/big_bj.png) no-repeat center top #1f2229;
+  }
   .md-hidden {
     display: none;
+  }
+  .md-visible {
+    display: block;
   }
   .self_sign {
     background: none;
@@ -895,6 +925,30 @@ ul {
     line-height: 24px;
     padding: 3px 0;
     padding-left: 12px;
+  }
+  .contact {
+    float: right;
+    padding-right: 13px;
+    margin-top: 8px;
+  }
+  .contact a {
+    font-size: 14px;
+    line-height: 90px;
+    box-sizing: border-box;
+  }
+  .contact a:first-of-type::before,
+  .contact a:last-of-type::before {
+    width: 30px;
+    height: 30px;
+    background: url(images/icon.png) no-repeat 0 -20px;
+    background-size: 200px;
+    margin: 31px 8px 0 34px;
+  }
+  .contact a:first-of-type {
+    padding-right: 35px;
+  }
+  .contact a:last-of-type::before {
+    background-position: -30px -20px;
   }
 }
 /*------------------------lg尺寸------------------------*/
@@ -1686,5 +1740,24 @@ ul {
     line-height: 30px;
     padding: 0;
     padding-left: 12px;
+  }
+  .contact {
+    margin-top: 12 px;
+  }
+  .contact a {
+    font-size: 14px;
+  }
+  .contact a:first-of-type::before,
+  .contact a:last-of-type::before {
+    margin: 27px 7px 30px 38px;
+  }
+  .contact a:first-of-type {
+    padding-right: 0px;
+  }
+  .contact a:first-of-type::before {
+    margin-right: 4px;
+  }
+  .contact a:last-of-type::before {
+    background-position: -Infinitypx -Infinitypx;
   }
 }
