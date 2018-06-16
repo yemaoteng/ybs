@@ -70,6 +70,33 @@
         }
     }
 }
+.self_sign {
+    background: url(images/triangle.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 26px / @size;
+    color: #c5cbd0;
+    line-height: 40px / @size;
+    padding: 42px / @size 34px / @size 30px / @size 69px / @size;
+    position: relative;
+    &:before, &:after{
+        content: '';
+        width: 26px / @size;
+        height: 26px / @size;
+        background: url(images/icon.png) no-repeat -38px / @size 0;
+        background-size: 400px / @size;
+        position: absolute;
+        left: 27px / @size;
+        top: 46px / @size;
+    }
+    &:after {
+        background-position: -64px / @size 0;
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 9px / @size;
+        margin-left: 10px / @size;
+    }
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width:768px) {
     @size:1;

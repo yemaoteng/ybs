@@ -169,6 +169,34 @@ h1 {
   font-size: 16px;
   line-height: 30px;
 }
+.self_sign {
+  background: url(images/triangle.png) no-repeat;
+  background-size: 100% 100%;
+  font-size: 13px;
+  color: #c5cbd0;
+  line-height: 20px;
+  padding: 21px 17px 15px 34.5px;
+  position: relative;
+}
+.self_sign:before,
+.self_sign:after {
+  content: '';
+  width: 13px;
+  height: 13px;
+  background: url(images/icon.png) no-repeat -19px 0;
+  background-size: 200px;
+  position: absolute;
+  left: 13.5px;
+  top: 23px;
+}
+.self_sign:after {
+  background-position: -32px 0;
+  position: static;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4.5px;
+  margin-left: 5px;
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
   .nav {
