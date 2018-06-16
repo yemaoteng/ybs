@@ -97,6 +97,35 @@
         margin-left: 10px / @size;
     }
 }
+.self_message {
+    padding-top: 37px / @size;
+}
+.self_list {
+    li {
+        position: relative;
+        font-size: 28px / @size;
+        line-height: 73px / @size;
+    }
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 132px / @size;
+        text-align: right;
+        padding-right: 19px / @size;
+        box-sizing: border-box;
+        color: #8d8e8f;
+
+    }
+    p {
+        margin-left: 132px / @size;
+        padding-left: 22px / @size;
+        color: #c5cbd0;
+        line-height: 48px / @size;
+        padding: (73px - 48px) / @size / 2 0;
+
+    }
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width:768px) {
     @size:1;

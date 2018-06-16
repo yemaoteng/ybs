@@ -35,7 +35,9 @@ a {
   color: #000;
 }
 h1,
-figure {
+figure,
+ul,
+p {
   margin: 0;
 }
 h1 {
@@ -44,6 +46,10 @@ h1 {
 .img {
   vertical-align: top;
   border: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
 }
 /*下面是生成的了*/
 /*------------------------栅格布局样式------------------------*/
@@ -196,6 +202,31 @@ h1 {
   vertical-align: top;
   margin-top: 4.5px;
   margin-left: 5px;
+}
+.self_message {
+  padding-top: 18.5px;
+}
+.self_list li {
+  position: relative;
+  font-size: 14px;
+  line-height: 36.5px;
+}
+.self_list span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 66px;
+  text-align: right;
+  padding-right: 9.5px;
+  box-sizing: border-box;
+  color: #8d8e8f;
+}
+.self_list p {
+  margin-left: 66px;
+  padding-left: 11px;
+  color: #c5cbd0;
+  line-height: 24px;
+  padding: 6.25px 0;
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
