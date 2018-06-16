@@ -155,7 +155,7 @@ ul {
   padding: 26.5px 10px 0 24px;
 }
 .self_pic {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .self_pic img {
   width: 100%;
@@ -259,8 +259,14 @@ ul {
   padding-left: 11px;
   background: url(images/context_center.png) repeat-y;
 }
+.self_list p a {
+  color: #c5cbd0;
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
   .nav {
     height: 86px;
     border: 2px solid #15161a;
@@ -271,6 +277,73 @@ ul {
     background-size: 400px;
     margin: 24px 0 0 20px;
     display: none;
+  }
+  .pic_box {
+    padding: 53px 0 0 24px;
+  }
+  .self_pic {
+    padding-bottom: 40px;
+  }
+  .self_pic img {
+    width: 200px;
+    height: 200px;
+  }
+  .self_pic h1 {
+    font-size: 48px;
+    line-height: 76px;
+    padding-left: 24px;
+    padding-top: 82px;
+  }
+  .self_pic h1 span {
+    color: #e16b5f;
+    font-size: 32px;
+    line-height: 61px;
+  }
+  .self_sign {
+    font-size: 26px;
+    line-height: 40px;
+    padding: 42px 34px 30px 69px;
+  }
+  .self_sign:before,
+  .self_sign:after {
+    width: 26px;
+    height: 26px;
+    background: url(images/icon.png) no-repeat -38px 0;
+    background-size: 400px;
+    left: 27px;
+    top: 46px;
+  }
+  .self_sign:after {
+    background-position: -64px 0;
+    margin-top: 9px;
+    margin-left: 52px;
+  }
+  .self_message {
+    padding-top: 38px;
+  }
+  .self_list li {
+    font-size: 28px;
+    line-height: 72px;
+  }
+  .self_list li:last-of-type p:before {
+    height: 26px;
+  }
+  .self_list span {
+    width: 132px;
+    padding-right: 19px;
+  }
+  .self_list span:after {
+    width: 18px;
+    height: 18px;
+    top: 28px;
+    right: -10px;
+    z-index: 2;
+  }
+  .self_list p {
+    margin-left: 132px;
+    line-height: 48px;
+    padding: 12px 0;
+    padding-left: 22px;
   }
 }
 /*------------------------md尺寸------------------------*/

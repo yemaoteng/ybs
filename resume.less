@@ -50,7 +50,7 @@
     padding: 53px / @size 20px / @size 0 24px;
 }
 .self_pic {
-    padding-bottom: 20px / @size;
+    padding-bottom: 40px / @size;
     img {
         width: 100%;
         border: 3px solid #e16b5f;
@@ -155,12 +155,17 @@
         padding: (72px - 48px) / @size / 2 0;        
         padding-left: 22px / @size;
         background: url(images/context_center.png) repeat-y;
-
+        a {
+            color: #c5cbd0;
+        }
     }
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width:768px) {
     @size:1;
+    .container {
+        padding: 0 50px / @size;
+    }
     .nav {
         height: 86px / @size;
         border: 2px / @size solid #15161a;
@@ -170,6 +175,76 @@
             background-size: 400px / @size;  
             margin: 24px / @size 0 0 20px /@size;
             display:none;
+        }
+    }
+    .pic_box {
+        padding: 53px / @size 0 0 24px;
+    }
+    .self_pic {
+        padding-bottom: 40px / @size;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        h1 {
+            font-size: 48px / @size;
+            line-height: 76px / @size;
+            padding-left: 24px / @size;
+            padding-top: 82px / @size;
+            span {
+                color: #e16b5f;
+                font-size: 32px / @size;
+                line-height: 61px / @size;
+            }
+        }
+    }
+    .self_sign {
+        font-size: 26px / @size;
+        line-height: 40px / @size;
+        padding: 42px / @size 34px / @size 30px / @size 69px / @size;
+        &:before, &:after{
+            width: 26px / @size;
+            height: 26px / @size;
+            background: url(images/icon.png) no-repeat -38px / @size 0;
+            background-size: 400px / @size;
+            left: 27px / @size;
+            top: 46px / @size;
+        }
+        &:after {
+            background-position: -64px / @size 0;
+            margin-top: 9px / @size;
+            margin-left: 52px / @size;
+        }
+    }
+    .self_message {
+        padding-top: 38px / @size;
+    }
+    .self_list {
+        li {
+            font-size: 28px / @size;
+            line-height: 72px / @size;  
+            &:last-of-type {
+                p:before {
+                    height: 26px / @size;
+                }
+            }
+        }
+        span {
+            width: 132px / @size;
+            padding-right: 19px / @size;
+            &:after {
+                width: 18px / @size;
+                height: 18px / @size;
+                top:28px / @size;
+                right: -10px / @size;
+                z-index: 2;
+            }
+        }
+        p {
+            margin-left: 132px / @size;
+            line-height: 48px / @size;
+            padding: (72px - 48px) / @size / 2 0;        
+            padding-left: 22px / @size;    
         }
     }
 }
