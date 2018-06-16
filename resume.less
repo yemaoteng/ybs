@@ -105,6 +105,15 @@
         position: relative;
         font-size: 28px / @size;
         line-height: 73px / @size;
+        &:first-of-type, &:last-of-type {
+            p {
+                background: none;
+                &::before {
+                    content:'';
+                    position: absolute;
+                }
+            }
+        }
     }
     span {
         position: absolute;
@@ -119,10 +128,11 @@
     }
     p {
         margin-left: 132px / @size;
-        padding-left: 22px / @size;
         color: #c5cbd0;
         line-height: 48px / @size;
-        padding: (73px - 48px) / @size / 2 0;
+        padding: (73px - 48px) / @size / 2 0;        
+        padding-left: 22px / @size;
+        background: url(images/context_center.png) repeat-y left top;
 
     }
 }

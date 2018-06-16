@@ -211,6 +211,15 @@ ul {
   font-size: 14px;
   line-height: 36.5px;
 }
+.self_list li:first-of-type p,
+.self_list li:last-of-type p {
+  background: none;
+}
+.self_list li:first-of-type p::before,
+.self_list li:last-of-type p::before {
+  content: '';
+  position: absolute;
+}
 .self_list span {
   position: absolute;
   left: 0;
@@ -223,10 +232,11 @@ ul {
 }
 .self_list p {
   margin-left: 66px;
-  padding-left: 11px;
   color: #c5cbd0;
   line-height: 24px;
   padding: 6.25px 0;
+  padding-left: 11px;
+  background: url(images/context_center.png) repeat-y left top;
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
