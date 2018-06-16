@@ -204,21 +204,31 @@ ul {
   margin-left: 5px;
 }
 .self_message {
-  padding-top: 18.5px;
+  padding-top: 19px;
 }
 .self_list li {
   position: relative;
   font-size: 14px;
-  line-height: 36.5px;
+  line-height: 36px;
 }
 .self_list li:first-of-type p,
 .self_list li:last-of-type p {
   background: none;
+  position: relative;
 }
 .self_list li:first-of-type p::before,
 .self_list li:last-of-type p::before {
-  content: '';
+  content: ' ';
   position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 50%;
+  background: url(images/context_center.png) repeat-y;
+}
+.self_list li:last-of-type p:before {
+  height: 13px;
+  top: 0;
 }
 .self_list span {
   position: absolute;
@@ -230,13 +240,24 @@ ul {
   box-sizing: border-box;
   color: #8d8e8f;
 }
+.self_list span:after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #754978;
+  border-radius: 50%;
+  top: 14px;
+  right: -5px;
+  z-index: 2;
+}
 .self_list p {
   margin-left: 66px;
   color: #c5cbd0;
   line-height: 24px;
-  padding: 6.25px 0;
+  padding: 6px 0;
   padding-left: 11px;
-  background: url(images/context_center.png) repeat-y left top;
+  background: url(images/context_center.png) repeat-y;
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
