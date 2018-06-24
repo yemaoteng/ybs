@@ -305,6 +305,7 @@ ul {
 .skill_bj {
   background-color: #eef2f5;
   padding-top: 25px;
+  padding-bottom: 35px;
 }
 .title {
   text-align: center;
@@ -337,6 +338,115 @@ ul {
   color: #fff;
   text-align: center;
   background: #e26c60;
+}
+.skill_list li p {
+  margin-left: 55px;
+  line-height: 35px;
+  position: relative;
+}
+.skill_list li p span {
+  color: #e26c60;
+  font-size: 18px;
+  padding-left: 8.5px;
+  position: relative;
+  z-index: 2;
+}
+.skill_list li p em {
+  position: absolute;
+  width: 10%;
+  left: 0;
+  top: 0;
+  height: 35px;
+}
+.skill_list li:nth-of-type(1) > span {
+  background: #60e26c;
+}
+.skill_list li:nth-of-type(1) p span {
+  color: #60e26c;
+}
+.skill_list li:nth-of-type(1) p em {
+  background-color: #ccf6d0;
+}
+.skill_list li:nth-of-type(2) > span {
+  background: #d6e260;
+}
+.skill_list li:nth-of-type(2) p span {
+  color: #d6e260;
+}
+.skill_list li:nth-of-type(2) p em {
+  background-color: #f2f6cc;
+}
+.skill_list li:nth-of-type(3) > span {
+  background: #e26c60;
+}
+.skill_list li:nth-of-type(3) p span {
+  color: #e26c60;
+}
+.skill_list li:nth-of-type(3) p em {
+  background-color: #f6d0cc;
+}
+.skill_list li:nth-of-type(4) > span {
+  background: #e260d6;
+}
+.skill_list li:nth-of-type(4) p span {
+  color: #e260d6;
+}
+.skill_list li:nth-of-type(4) p em {
+  background-color: #f6ccf2;
+}
+.skill_list li:nth-of-type(5) > span {
+  background: #6c60e2;
+}
+.skill_list li:nth-of-type(5) p span {
+  color: #6c60e2;
+}
+.skill_list li:nth-of-type(5) p em {
+  background-color: #d0ccf6;
+}
+.skill_list li:nth-of-type(6) > span {
+  background: #60d6e2;
+}
+.skill_list li:nth-of-type(6) p span {
+  color: #60d6e2;
+}
+.skill_list li:nth-of-type(6) p em {
+  background-color: #ccf2f6;
+}
+.skill_list li:nth-of-type(7) > span {
+  background: #60e26c;
+}
+.skill_list li:nth-of-type(7) p span {
+  color: #60e26c;
+}
+.skill_list li:nth-of-type(7) p em {
+  background-color: #ccf6d0;
+}
+.skill_list li:nth-of-type(8) > span {
+  background: #d6e260;
+}
+.skill_list li:nth-of-type(8) p span {
+  color: #d6e260;
+}
+.skill_list li:nth-of-type(8) p em {
+  background-color: #f2f6cc;
+}
+.skill_list li:nth-of-type(9) > span {
+  background: #e26c60;
+}
+.skill_list li:nth-of-type(9) p span {
+  color: #e26c60;
+}
+.skill_list li:nth-of-type(9) p em {
+  background-color: #f6d0cc;
+}
+.skill_list li:nth-of-type(10) > span {
+  background: #e260d6;
+}
+.skill_list li:nth-of-type(10) p span {
+  color: #e260d6;
+}
+.skill_list li:nth-of-type(10) p em {
+  background-color: #f6ccf2;
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
@@ -439,6 +549,128 @@ ul {
   }
   .contact a:last-of-type::before {
     background-position: -60px -40px;
+  }
+  .skill_bj {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .title h2 {
+    font-size: 50px;
+    line-height: 67px;
+  }
+  .title h4 {
+    font-size: 26px;
+    line-height: 45px;
+  }
+  .skill_list li {
+    margin-top: 40px;
+    line-height: 70px;
+  }
+  .skill_list li > span {
+    width: 110px;
+    height: 70px;
+    font-size: 36px;
+  }
+  .skill_list li p {
+    margin-left: 110px;
+    line-height: 70px;
+  }
+  .skill_list li p span {
+    font-size: 36px;
+    padding-left: 17px;
+  }
+  .skill_list li p em {
+    height: 70px;
+  }
+  .skill_list li:nth-of-type(1) > span {
+    background: #60e26c;
+  }
+  .skill_list li:nth-of-type(1) p span {
+    color: #60e26c;
+  }
+  .skill_list li:nth-of-type(1) p em {
+    background-color: #ccf6d0;
+  }
+  .skill_list li:nth-of-type(2) > span {
+    background: #d6e260;
+  }
+  .skill_list li:nth-of-type(2) p span {
+    color: #d6e260;
+  }
+  .skill_list li:nth-of-type(2) p em {
+    background-color: #f2f6cc;
+  }
+  .skill_list li:nth-of-type(3) > span {
+    background: #e26c60;
+  }
+  .skill_list li:nth-of-type(3) p span {
+    color: #e26c60;
+  }
+  .skill_list li:nth-of-type(3) p em {
+    background-color: #f6d0cc;
+  }
+  .skill_list li:nth-of-type(4) > span {
+    background: #e260d6;
+  }
+  .skill_list li:nth-of-type(4) p span {
+    color: #e260d6;
+  }
+  .skill_list li:nth-of-type(4) p em {
+    background-color: #f6ccf2;
+  }
+  .skill_list li:nth-of-type(5) > span {
+    background: #6c60e2;
+  }
+  .skill_list li:nth-of-type(5) p span {
+    color: #6c60e2;
+  }
+  .skill_list li:nth-of-type(5) p em {
+    background-color: #d0ccf6;
+  }
+  .skill_list li:nth-of-type(6) > span {
+    background: #60d6e2;
+  }
+  .skill_list li:nth-of-type(6) p span {
+    color: #60d6e2;
+  }
+  .skill_list li:nth-of-type(6) p em {
+    background-color: #ccf2f6;
+  }
+  .skill_list li:nth-of-type(7) > span {
+    background: #60e26c;
+  }
+  .skill_list li:nth-of-type(7) p span {
+    color: #60e26c;
+  }
+  .skill_list li:nth-of-type(7) p em {
+    background-color: #ccf6d0;
+  }
+  .skill_list li:nth-of-type(8) > span {
+    background: #d6e260;
+  }
+  .skill_list li:nth-of-type(8) p span {
+    color: #d6e260;
+  }
+  .skill_list li:nth-of-type(8) p em {
+    background-color: #f2f6cc;
+  }
+  .skill_list li:nth-of-type(9) > span {
+    background: #e26c60;
+  }
+  .skill_list li:nth-of-type(9) p span {
+    color: #e26c60;
+  }
+  .skill_list li:nth-of-type(9) p em {
+    background-color: #f6d0cc;
+  }
+  .skill_list li:nth-of-type(10) > span {
+    background: #e260d6;
+  }
+  .skill_list li:nth-of-type(10) p span {
+    color: #e260d6;
+  }
+  .skill_list li:nth-of-type(10) p em {
+    background-color: #f6ccf2;
   }
 }
 /*------------------------md尺寸------------------------*/
@@ -995,6 +1227,41 @@ ul {
   }
   .contact a:last-of-type::before {
     background-position: -30px -20px;
+  }
+  .skill_bj {
+    padding-top: 36px;
+    padding-bottom: 59px;
+  }
+  .title h2 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .title h4 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .skill_list {
+    padding-top: 23px;
+  }
+  .skill_list li {
+    margin-top: 19px;
+    line-height: 40px;
+  }
+  .skill_list li > span {
+    width: 59px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .skill_list li p {
+    margin-left: 59px;
+    line-height: 40px;
+  }
+  .skill_list li p span {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .skill_list li p em {
+    height: 40px;
   }
 }
 /*------------------------lg尺寸------------------------*/
