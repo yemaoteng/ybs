@@ -23,12 +23,6 @@
         left: -100% / @num * @index;
     }
 }
-/*------------------------公用类------------------------*/
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
 //样式方法
 @color: #e26c60;
 .icolor(@index) when (@index>0){
@@ -49,6 +43,25 @@
         }
     }
 }
+.bg(@index,@w,@s) when(@index>0){
+    .bg(@index - 1,@w,@s);
+    li:nth-of-type(@{index}){
+        h2{
+            em{
+                &::before{
+                    background-position: -(@index - 1) * @w / @s -254px / @s;
+                }
+            }
+        }
+    }
+}
+/*------------------------公用类------------------------*/
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /*------------------------xs尺寸------------------------*/
 .col(13,13,xs);
 .xs-hidden {
@@ -304,7 +317,7 @@
     padding-top: 46px / @size;
     padding-left: 49px / @size;
     li{
-        &:first-of-type{
+        &:first-of-type{//列表第一个多了个点，在上
             h2{
                 &::before{
                     .dian(#e26c60);
@@ -313,7 +326,7 @@
                 }
             }
         }
-        &:last-of-type{
+        &:last-of-type{//列表最后一个多了个点，在下
             .content{
                 position: relative;
                 &::before{
@@ -327,7 +340,7 @@
                 }
             }
         }
-        h2{
+        h2{//年份和岗位
             font-family: "微软雅黑";
             height: 72px / @size;
             position: relative;
@@ -336,14 +349,14 @@
                 bottom: -7px / @size;
             }
             span{
-                &:first-of-type{
+                &:first-of-type{//2018年XX的时间信息
                     font-size: 24px /@size;
                     float: left;
                     line-height: 56px / @size;
                     padding-top: 16px / @size;
                     text-indent: 52px / @size;
                 }
-                &:last-of-type{
+                &:last-of-type{//岗位前端开发工程师
                     font-size: 30px / @size;
                     float: right;
                     line-height: 62px / @size;
@@ -351,7 +364,103 @@
                     padding-right: 30px / @size;
                 }
             }
+            em{//大圈圈，底下白色带部分边框
+                position: relative;
+                z-index: 2;
+                float: left;
+                background:white;
+                margin-left: -42px / @size;
+                margin-top: 34px / @size;
+                padding: 8px / @size;
+                border: 2px / @size solid transparent;
+                border-top: 2px / @size solid #e26c60;
+                border-radius: 50%;
+                transform: rotate(45deg);
+                &::before{//大圈圈的图标
+                    content:'';
+                    float: left;
+                    width: 60px / @size;
+                    height: 60px / @size;
+                    background: url(./images/icon.png) no-repeat 0 -254px / @size;
+                    background-size: 400px / @size;
+                    transform: rotate(-45deg);
+                }
+            }
         }
+    }
+    li:nth-of-type(odd){//奇数项
+        h2{
+            border-bottom: 2px / @size solid #e26c60;
+            border-left: 2px / @size solid #e26c60;
+            color: #e26c60;
+            &::after{
+                .dian(#e26c60);
+            }
+            em{
+                border-top: 2px / @size solid #e26c60;
+            }
+        }
+        .content{
+            border-left: 2px / @size solid #985a99;
+            &::before{//这个其实是最最最末尾的点点，奇数颜色
+                background:#985a99;
+            }
+            h4{
+                &::before{
+                    background: #985a99;
+                }
+            }
+        }
+    }
+    li:nth-of-type(even){
+        h2{
+            border-bottom: 2px / @size solid #985a99;
+            border-left: 2px / @size solid #985a99;
+            color: #985a99;
+            &::after{
+                .dian(#985a99);
+            }
+            em{
+                border-top: 2px / @size solid #985a99;
+            }
+        }
+        .content{
+            border-left: 2px / @size solid #985a99;
+            &::before{//这个其实是最最最末尾的点点，偶数颜色
+                background:#985a99;
+            }
+            h4{
+                &::before{
+                    background: #985a99;
+                }
+            }
+        }
+    }
+    .bg(3,60px,@size);
+}
+.content {
+    padding-left: 37px / @size;
+    h4{
+        font-size: 32px / @size;
+        color:#464646;
+        padding-top: 11px / @size;
+        line-height: 65px / @size;
+        position: relative;
+        &::before{//大圈圈下面那个小点点
+            content:'';
+            position: absolute;
+            width: 12px / @size;
+            height: 12px / @size;
+            border-radius: 50%;
+            left: -44px / @size;
+            top: 37px / @size;
+            z-index: 3;
+        }
+    }
+    p{
+        font-size: 26px / @size;
+        color: #999999;
+        line-height: 48px / @size;
     }
 }
 
@@ -477,6 +586,7 @@
         }
     }
     .skill_list{
+        padding-top: 2px / @size;
         li{
             line-height: 70px / @size;
             margin-top: 40px / @size;
@@ -499,6 +609,110 @@
             }
         }
         .icolor(10);
+    }
+    .work{
+        padding-top: 51px / @size;
+        padding-bottom: 48px / @size;
+        .title{
+            h2{
+                line-height: 66px / @size;
+            }
+            h4{
+                line-height: 26px / @size;
+            }
+        }
+    }
+    .work_list{
+        .dian(){
+            width: 12px / @size;
+            height: 12px / @size;
+        }
+        padding-top: 51px;
+        padding-left: 16px;
+        li{
+            &:first-of-type{
+                h2{
+                    &::before{
+                        .dian();//第一个点
+                        left: -7px / @size;
+                        top: -6px / @size;
+                    }
+                }
+            }
+            &:last-of-type{
+                .content{
+                    &::before{
+                        width:12px / @size;
+                        height: 12px / @size;
+                        left:-7px / @size;
+                    }
+                }
+            }
+            h2{
+                height: 72px / @size;
+                &:after{
+                    bottom:-7px / @size;
+                }
+                span{
+                    &:first-of-type{
+                        font-size: 24px / @size;
+                        line-height: 56px / @size;
+                        padding-top: 16px / @size;
+                        text-indent: 52px / @size;  
+                    }
+                    &:last-of-type{
+                        font-size: 30px / @size;
+                        line-height: 62px / @size;
+                        padding-top: 10px / @size;
+                        padding-right: 28px / @size;
+                    }
+                }
+                em{
+                    margin-left: -42px / @size;
+                    margin-top: 34px / @size;
+                    padding: 8px / @size;
+                    border:2px / @size solid transparent;
+                    border-top:2px / @size solid #e26c60;
+                    &:before{
+                      width: 60px / @size;
+                      height: 60px / @size;
+                      background: url(../images/icon.png) no-repeat 0 -254px / @size;
+                      background-size: 400px / @size;
+                    }
+                }
+            }
+        }
+        li:nth-of-type(odd){
+            h2{
+              border-bottom: 2px / @size solid #e26c60;
+              border-left:2px / @size solid #e26c60 ;
+              &:after{
+                .dian();
+              }
+              em{
+                border-top:2px / @size solid #e26c60;
+              }
+            }
+            .content{
+              border-left:2px / @size solid #985a99;
+            }
+          }
+        li:nth-of-type(even){
+            h2{
+              border-bottom: 2px / @size solid #985a99;
+              border-left:2px / @size solid #985a99 ;
+              &:after{
+                .dian();
+              }
+              em{
+                border-top:2px / @size solid #985a99;
+              }
+            }
+            .content{
+              border-left:2px / @size solid #e26c60;
+            }
+        }
+        .bg(3,60px,@size); 
     }
 }
 /*------------------------md尺寸------------------------*/
