@@ -448,6 +448,17 @@ ul {
 .skill_list li:nth-of-type(10) p em {
   background-color: #f6ccf2;
 }
+.work {
+  padding-top: 25.5px;
+}
+.work .title h2 {
+  font-size: 25px;
+  line-height: 33px;
+}
+.work .title h4 {
+  font-size: 8px;
+  line-height: 13px;
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
   .container {
