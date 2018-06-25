@@ -463,6 +463,60 @@
         line-height: 48px / @size;
     }
 }
+.case_bj{
+    background: #eef2f5;
+    border-top: 1px solid #edecee;
+    padding-top: 59px / @size;
+    padding-bottom: 50px / @size;
+}
+.case_list{
+    padding-top: 40px / @size;
+    overflow:hidden;
+    >li{
+        margin-bottom: 10px / @size;
+    }
+    h2{
+        height: 100px / @size;
+        overflow: hidden;
+        background: #e4877e;
+        font-size: 36px / @size;
+        color: #fff;
+        text-indent: 20px / @size;
+        line-height: 100px / @size;
+    }
+    span{
+        float: left;
+        width: 40px / @size;
+        height: 40px / @size;
+        background: url(./images/icon.png) no-repeat -135px / @size 0;
+        background-size: 400px / @size;
+        margin: 31px / @size 0 0 19px/ @size;
+    }
+    .active{
+        background-position: -95px / @size 0;
+    }
+}
+.case_content{
+    display: none;
+    li{
+      height: 99px/ @size;
+      line-height: 99px / @size;
+      padding-top: 1px;
+      background: #fff;
+      font-size: 32px / @size;
+      color: #464646;
+      text-indent: 30px/ @size;
+      border-top: 3px solid #eef2f5;
+      &:first-of-type{
+        border-top: none;
+      }
+    }
+    .checked{
+      background: #fdf6f5;
+      border-top-color:#e4877e ;
+      color: #e26c60;
+    }
+}
 
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width:768px) {
