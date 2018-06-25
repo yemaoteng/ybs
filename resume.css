@@ -450,14 +450,53 @@ ul {
 }
 .work {
   padding-top: 25.5px;
+  padding-bottom: 19.5px;
 }
 .work .title h2 {
-  font-size: 25px;
   line-height: 33px;
 }
 .work .title h4 {
-  font-size: 8px;
   line-height: 13px;
+}
+.work_list {
+  padding-top: 23px;
+  padding-left: 24.5px;
+}
+.work_list li:first-of-type h2::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #e26c60;
+  border-radius: 50%;
+  left: -3.5px;
+  top: -3px;
+}
+.work_list li:last-of-type .content {
+  position: relative;
+}
+.work_list li h2 {
+  font-family: "微软雅黑";
+  height: 36px;
+  position: relative;
+}
+.work_list li h2::after {
+  right: 0;
+  bottom: -3.5px;
+}
+.work_list li h2 span:first-of-type {
+  font-size: 12px;
+  float: left;
+  line-height: 28px;
+  padding-top: 8px;
+  text-indent: 26px;
+}
+.work_list li h2 span:last-of-type {
+  font-size: 15px;
+  float: right;
+  line-height: 31px;
+  padding-top: 5px;
+  padding-right: 15px;
 }
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {

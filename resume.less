@@ -282,14 +282,67 @@
 }
 .work {
     padding-top: 51px / @size;
+    padding-bottom: 39px / @size;
     .title {
         h2 {
-            font-size: 50px / @size;
             line-height: 66px / @size;
         }
         h4{
-            font-size: 16px / @size;
             line-height: 26px / @size;
+        }
+    }
+}
+.work_list {
+    .dian(@c) {
+        content: '';
+        position: absolute;
+        width: 12px / @size;
+        height: 12px / @size;
+        background: @c;
+        border-radius: 50%;
+    }
+    padding-top: 46px / @size;
+    padding-left: 49px / @size;
+    li{
+        &:first-of-type{
+            h2{
+                &::before{
+                    .dian(#e26c60);
+                    left:-7px / @size;
+                    top: -6px / @size;
+                }
+            }
+        }
+        &:last-of-type{
+            .content{
+                position: relative;
+
+            }
+        }
+        h2{
+            font-family: "微软雅黑";
+            height: 72px / @size;
+            position: relative;
+            &::after{
+                right:0;
+                bottom: -7px / @size;
+            }
+            span{
+                &:first-of-type{
+                    font-size: 24px /@size;
+                    float: left;
+                    line-height: 56px / @size;
+                    padding-top: 16px / @size;
+                    text-indent: 52px / @size;
+                }
+                &:last-of-type{
+                    font-size: 30px / @size;
+                    float: right;
+                    line-height: 62px / @size;
+                    padding-top: 10px / @size;
+                    padding-right: 30px / @size;
+                }
+            }
         }
     }
 }
