@@ -475,6 +475,15 @@ ul {
 .work_list li:last-of-type .content {
   position: relative;
 }
+.work_list li:last-of-type .content::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: -3.5px;
+  bottom: 0;
+}
 .work_list li h2 {
   font-family: "微软雅黑";
   height: 36px;

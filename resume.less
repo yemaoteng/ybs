@@ -293,7 +293,7 @@
     }
 }
 .work_list {
-    .dian(@c) {
+    .dian(@c) {//这只是个函数定义而已
         content: '';
         position: absolute;
         width: 12px / @size;
@@ -316,7 +316,15 @@
         &:last-of-type{
             .content{
                 position: relative;
-
+                &::before{
+                    content: '';
+                    width: 12px / @size;
+                    height: 12px / @size;
+                    border-radius: 50%;
+                    position: absolute;
+                    left:-7px / @size;
+                    bottom: 0;
+                }
             }
         }
         h2{
