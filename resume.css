@@ -575,13 +575,13 @@ ul {
   border-top: 1px solid #985a99;
 }
 .work_list li:nth-of-type(even) .content {
-  border-left: 1px solid #985a99;
+  border-left: 1px solid #e26c60;
 }
 .work_list li:nth-of-type(even) .content::before {
   background: #985a99;
 }
 .work_list li:nth-of-type(even) .content h4::before {
-  background: #985a99;
+  background: #e26c60;
 }
 .work_list li:nth-of-type(1) h2 em::before {
   background-position: 0px -127px;
@@ -897,7 +897,7 @@ ul {
   .work_list li h2 em:before {
     width: 60px;
     height: 60px;
-    background: url(../images/icon.png) no-repeat 0 -254px;
+    background: url(images/icon.png) no-repeat 0 -254px;
     background-size: 400px;
   }
   .work_list li:nth-of-type(odd) h2 {
@@ -936,6 +936,24 @@ ul {
   }
   .work_list li:nth-of-type(3) h2 em::before {
     background-position: -120px -254px;
+  }
+  .content {
+    padding-left: 37px;
+  }
+  .content h4 {
+    font-size: 32px;
+    padding-top: 11px;
+    line-height: 65px;
+  }
+  .content h4::before {
+    width: 12px;
+    height: 12px;
+    left: -44px;
+    top: 37px;
+  }
+  .content p {
+    font-size: 26px;
+    line-height: 48px;
   }
 }
 /*------------------------md尺寸------------------------*/
@@ -1527,6 +1545,88 @@ ul {
   }
   .skill_list li p em {
     height: 40px;
+  }
+  .work {
+    padding-top: 42px;
+    padding-bottom: 67px;
+  }
+  .work .title h2 {
+    line-height: 49px;
+  }
+  .work .title h4 {
+    line-height: 30px;
+  }
+  .work_list {
+    padding-top: 38px;
+    padding-left: 42px;
+  }
+  .work_list li:first-of-type h2::before {
+    width: 10px;
+    height: 10px;
+    left: -6px;
+    top: -5px;
+  }
+  .work_list li:last-of-type .content::before {
+    width: 10px;
+    height: 10px;
+    left: -6px;
+  }
+  .work_list li h2 {
+    height: 56px;
+  }
+  .work_list li h2::after {
+    bottom: -6px;
+  }
+  .work_list li h2 span:first-of-type {
+    font-size: 18px;
+    line-height: 41px;
+    padding-top: 15px;
+    text-indent: 60px;
+  }
+  .work_list li h2 span:last-of-type {
+    font-size: 14px;
+    line-height: 44px;
+    padding-top: 0;
+    padding-right: 18px;
+    transform: translateY(58px);
+  }
+  .work_list li h2 em {
+    margin-left: -40px;
+    margin-top: 17px;
+    background-clip: padding-box;
+  }
+  .work_list li:nth-of-type(odd) h2:after {
+    width: 10px;
+    height: 10px;
+  }
+  .work_list li:nth-of-type(odd) h2 em {
+    border-bottom: 2px solid #985a99;
+  }
+  .work_list li:nth-of-type(even) h2:after {
+    width: 10px;
+    height: 10px;
+  }
+  .work_list li:nth-of-type(even) h2 em {
+    border-bottom: 2px solid #e26c60;
+  }
+  .content {
+    padding-left: 57px;
+  }
+  .content h4 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    padding-top: 4px;
+    line-height: 46px;
+  }
+  .content h4:before {
+    width: 10px;
+    height: 10px;
+    left: -102px;
+    top: -11px;
+  }
+  .content p {
+    font-size: 12px;
+    line-height: 24px;
   }
 }
 /*------------------------lg尺寸------------------------*/
@@ -2337,5 +2437,15 @@ ul {
   }
   .contact a:last-of-type::before {
     background-position: -Infinitypx -Infinitypx;
+  }
+  .work {
+    padding-bottom: 37px;
+  }
+  .work_list h2 span:first-of-type {
+    text-indent: 59px;
+  }
+  .work_list h2 span:last-of-type {
+    line-height: 45px;
+    padding-right: 17px;
   }
 }

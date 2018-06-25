@@ -425,13 +425,13 @@
             }
         }
         .content{
-            border-left: 2px / @size solid #985a99;
+            border-left: 2px / @size solid #e26c60;
             &::before{//这个其实是最最最末尾的点点，偶数颜色
                 background:#985a99;
             }
             h4{
                 &::before{
-                    background: #985a99;
+                    background: #e26c60;
                 }
             }
         }
@@ -676,7 +676,7 @@
                     &:before{
                       width: 60px / @size;
                       height: 60px / @size;
-                      background: url(../images/icon.png) no-repeat 0 -254px / @size;
+                      background: url(images/icon.png) no-repeat 0 -254px / @size;
                       background-size: 400px / @size;
                     }
                 }
@@ -713,6 +713,24 @@
             }
         }
         .bg(3,60px,@size); 
+    }
+    .content{
+        padding-left: 37px / @size;
+        h4{
+            font-size: 32px / @size;
+            padding-top: 11px / @size;
+            line-height: 65px / @size;
+            &::before{
+                width: 12px / @size;
+                height: 12px / @size;
+                left: -44px / @size;
+                top: 37px / @size;
+            }
+        }
+        p{
+            font-size: 26px / @size;
+            line-height: 48px / @size;
+        }
     }
 }
 /*------------------------md尺寸------------------------*/
@@ -899,6 +917,111 @@
             }
         }
     }
+    .work{
+        padding-top: 42px;
+        padding-bottom: 67px;
+        .title{
+            h2{
+                line-height: 49px;
+            }
+            h4{
+                line-height: 30px;
+            }
+        }
+    }
+    .work_list{
+        .dian(){
+            width:10px;
+            height:10px;
+        }
+        padding-top: 38px;
+        padding-left: 42px;
+        li{
+            &:first-of-type{
+                h2{
+                    &::before{
+                        .dian();
+                        left:-6px;
+                        top:-5px;
+                    }
+                }
+            }
+            &:last-of-type{
+                .content{
+                    &::before{
+                        width: 10px;
+                        height: 10px;
+                        left: -6px;
+                    }
+                }
+            }
+            h2{
+                height: 56px;
+                &::after{
+                    bottom:-6px;
+                }
+                span{
+                    &:first-of-type{
+                        font-size: 18px;
+                        line-height: 41px;
+                        padding-top: 15px;
+                        text-indent: 60px;
+                    }
+                    &:last-of-type{
+                        font-size: 14px;
+                        line-height: 44px;
+                        padding-top: 0;
+                        padding-right: 18px;
+                        transform: translateY(58px);
+                    }
+                }
+                em{
+                    margin-left: -40px;
+                    margin-top: 17px;
+                    background-clip: padding-box;
+                }
+            }
+        }
+        li:nth-of-type(odd){
+            h2{
+                &:after{
+                    .dian();
+                }
+              em{
+                    border-bottom: 2px solid #985a99;
+                }
+            }
+        }
+        li:nth-of-type(even){
+            h2{
+              &:after{
+                .dian();
+              }
+              em{
+                border-bottom: 2px solid #e26c60;
+              }
+            }
+        }
+    }
+    .content{
+        padding-left: 57px;
+        h4{
+          font-size: 18px;
+          font-family: "微软雅黑";
+          padding-top: 4px;
+          line-height: 46px;
+          &:before{
+            width: 10px;
+            height: 10px;
+            left:-102px;
+            top:-11px;
+          }
+        }
+        p{
+          font-size: 12px;
+          line-height:24px;
+        }
+      }
 }
 /*------------------------lg尺寸------------------------*/
 @media all and (min-width:1080px) {
@@ -945,6 +1068,22 @@
             }
             &:last-of-type::before {
                 background-position:  -60px / 0 -40px / 0;
+            }
+        }
+    }
+    .work{
+        padding-bottom: 37px;
+    }
+    .work_list{
+        h2{
+            span{
+                &:first-of-type{
+                    text-indent: 59px;
+                }
+                &:last-of-type{
+                    line-height: 45px;
+                    padding-right: 17px;
+                }
             }
         }
     }
