@@ -19,37 +19,107 @@ body{
 }
 .exp_list{
     list-style: none;
+    padding-top: 30px;
     li{
+        position: relative;
         h2{  
+            border-bottom: 2px solid coral;
+            border-left: 2px solid coral;
             span{
                 line-height: 40px;
                 &:first-of-type{
                     font-size: 18px;
-                    color: green;
+                    text-indent: 30px;
+                    color: crimsons;
                     float: left;
                     
                 }
                 &:last-of-type{
+                    position: relative;
                     font-size: 20px;
-                    color: blue;
+                    margin-right: 20px;
+                    color: coral;
                     float: right;
+                    &::after {
+                        position: absolute;
+                        content:'';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        bottom: -4px;
+                        right: -23px;
+                        border-radius: 50%;
+                        background-color: crimson;
+                    }
                 }
             }
         }
-        h2::after{
+        h2::after{//清除浮动而已
             content:'';
             display: block;
             clear: both;
         }
-        h3 {
-            line-height: 24px;
-            font-size: 16px;
+        div{//大大的图标
+            position: absolute;
+            z-index: 1;
+            content:'';
+            width:54px;
+            height: 54px;
+            top:13px;
+            left: -27px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid transparent;
+            border-top: 2px solid coral;
+            transform: rotate(45deg);
+            &::before{
+                transform: rotate(-45deg);
+                box-sizing: border-box;
+                position: absolute;
+                display: block;
+                z-index: 3;
+                content:'';
+                width: 42px;
+                height: 42px;
+                top: 4px;
+                left: 4px;
+                border-radius: 50%;
+                background: url("../images/icon.png") no-repeat;
+                background-position: 0 -254 / 60 * 42px;
+                background-size: 400px / 60 * 42;
+            }
         }
-        p{
-            padding: 0;
-            margin:0;
-            line-height: 24px;
-            font-size: 14px;
+        article {
+            position: relative;
+            padding:0;
+            padding-left: 30px;
+            line-height: 20px;
+            font-size: 12px;
+            margin: 7px 0 0 0;
+            border-left: 2px solid coral;
+            h3{
+                line-height: 20px;
+                font-size: 15px;
+
+            }
+            p{
+                line-height: 20px;
+                font-size: 14px;
+            }
+            &::before{//大圈圈下面的小点，挂
+                z-index: 2;
+                position: absolute;
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                top: 16px;
+                left: -4px;
+                border-radius: 50%;
+                background-color: coral;
+                
+            }
         }
+        
     }
 }
