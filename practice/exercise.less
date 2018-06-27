@@ -10,9 +10,7 @@ h4{
     padding: 0;
     margin: 0;
 }
-body{
-    background-color: #eee;
-}
+
 .container{
     background: white;
     margin: 0 30px;
@@ -31,7 +29,7 @@ body{
                 &:first-of-type{
                     font-size: 18px;
                     text-indent: 30px;
-                    color: crimsons;
+                    color: coral;
                     float: left;
                     
                 }
@@ -50,7 +48,7 @@ body{
                         bottom: -4px;
                         right: -23px;
                         border-radius: 50%;
-                        background-color: crimson;
+                        background-color: coral;
                     }
                 }
             }
@@ -60,7 +58,7 @@ body{
             display: block;
             clear: both;
         }
-        div{//大大的图标
+        div{//大大的图标，直接生在div上面
             position: absolute;
             z-index: 1;
             content:'';
@@ -107,7 +105,7 @@ body{
                 line-height: 20px;
                 font-size: 14px;
             }
-            &::before{//大圈圈下面的小点，挂article
+            &::before{//大圈圈下面的小点，挂article前面
                 z-index: 2;
                 position: absolute;
                 content: '';
@@ -135,7 +133,7 @@ body{
             }
         }
         &:last-of-type{
-            article:after{
+            article:after{//最下面的点点，挂在article后面
                 content:'';
                 position: absolute;
                 display: block;
@@ -146,6 +144,32 @@ body{
                 border-radius: 50%;
                 background-color: coral;
                 z-index: 5;
+            }
+        }
+        &:nth-of-type(odd){
+            article{
+                border-left-color: purple;
+                &::before{
+                    background-color: purple;
+                }
+                &::after{
+                    background-color: purple;
+                }
+            }
+        }
+        &:nth-of-type(even){
+            h2{
+                border-left-color: purple;
+                border-bottom-color: purple;
+                span:last-of-type::after{
+                    background-color: purple;
+                }
+            }
+            div{
+                border-top-color: purple;
+                &::before{
+                    background-position-x: -60px / 60 * 42;
+                }
             }
         }
     }
