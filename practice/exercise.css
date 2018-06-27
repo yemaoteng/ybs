@@ -64,7 +64,7 @@ h4 {
   content: '';
   width: 54px;
   height: 54px;
-  top: 13px;
+  top: 15px;
   left: -27px;
   border-radius: 50%;
   background-color: white;
@@ -112,7 +112,7 @@ h4 {
   display: block;
   width: 6px;
   height: 6px;
-  top: 16px;
+  top: 20px;
   left: -4px;
   border-radius: 50%;
   background-color: coral;
@@ -139,6 +139,9 @@ h4 {
   border-radius: 50%;
   background-color: coral;
   z-index: 5;
+}
+.exp_list li:nth-of-type(odd) div::before {
+  background-position-x: -84px;
 }
 .exp_list li:nth-of-type(odd) article {
   border-left-color: purple;
