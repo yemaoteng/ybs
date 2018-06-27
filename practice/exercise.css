@@ -20,6 +20,7 @@ body {
 .exp_list {
   list-style: none;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .exp_list li {
   position: relative;
@@ -118,4 +119,27 @@ body {
   left: -4px;
   border-radius: 50%;
   background-color: coral;
+}
+.exp_list li:first-of-type h2:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: coral;
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  border-radius: 50%;
+}
+.exp_list li:last-of-type article:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  bottom: -3px;
+  left: -4px;
+  border-radius: 50%;
+  background-color: coral;
+  z-index: 5;
 }
