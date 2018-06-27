@@ -671,6 +671,110 @@ ul {
   border-top-color: #e4877e ;
   color: #e26c60;
 }
+.list_content {
+  transform: translateX(100vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 9;
+  width: 100vw;
+  min-height: 100vh;
+}
+.list_content .nav {
+  background: #1f2229;
+}
+.list_content .icon {
+  display: block;
+}
+.list_content ul {
+  overflow: auto;
+  padding: 0 15px;
+  background: white;
+}
+.list_content ul li {
+  display: none;
+}
+.list_content ul li header {
+  height: 67px;
+  padding: 8.5px 0 10px 0;
+  box-sizing: border-box;
+  background: linear-gradient(#fff 0, #fff 65px, rgba(0, 0, 0, 0) 65px, rgba(0, 0, 0, 0) 67px), repeating-linear-gradient(90deg, #d8d8d8 0, #d8d8d8 2px, #fff 2px, #fff 3px);
+}
+.list_content ul li header h2 {
+  font-size: 18px;
+  color: #000;
+  line-height: 27px;
+}
+.list_content ul li header h4 {
+  font-size: 12px;
+  color: #999;
+  line-height: 21.5px;
+}
+.list_content ul li article {
+  padding-top: 10px;
+}
+.list_content ul li article .text {
+  font-size: 15px;
+  color: #777879;
+  line-height: 25px;
+  padding-bottom: 9.5px;
+}
+.list_content ul li article img {
+  width: 100%;
+}
+.list_content ul li article .share {
+  padding: 15px 0;
+}
+.list_content ul li article .share span {
+  height: 35px;
+}
+.list_content ul li article .share span:first-of-type {
+  font-size: 14px;
+  color: #777879;
+  float: left;
+  line-height: 35px;
+}
+.list_content ul li article .share span:last-of-type {
+  float: left;
+}
+.list_content ul li article .share span:last-of-type a {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 0 7.5px;
+  background: url(images/icon.png) no-repeat;
+  background-size: 200px;
+}
+.list_content ul li article .share span:last-of-type a:nth-of-type(1) {
+  background-position: 0px -50px;
+}
+.list_content ul li article .share span:last-of-type a:nth-of-type(2) {
+  background-position: -35px -50px;
+}
+.list_content ul li article .share span:last-of-type a:nth-of-type(3) {
+  background-position: -70px -50px;
+}
+.list_content ul li article .share span:last-of-type a:nth-of-type(4) {
+  background-position: -105px -50px;
+}
+.list_content ul li article .share span:last-of-type a:nth-of-type(5) {
+  background-position: -140px -50px;
+}
+.list_content ul li article .share span:last-of-type a:last-of-type {
+  margin-right: 0;
+}
+.list_content ul li article button {
+  display: block;
+  height: 40px;
+  background: #985a99;
+  font-size: 15px;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  margin-top: 14.5px;
+}
 /*------------------------sm尺寸------------------------*/
 @media all and (min-width: 768px) {
   .container {

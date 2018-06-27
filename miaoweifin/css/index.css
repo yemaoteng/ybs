@@ -647,7 +647,7 @@ ul {
   color: #e26c60;
 }
 .list_content {
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
   position: fixed;
   top: 0;
   left: 0;
