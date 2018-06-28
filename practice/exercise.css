@@ -10,9 +10,6 @@ h4 {
   padding: 0;
   margin: 0;
 }
-body {
-  background-color: #eee;
-}
 .container {
   background: white;
   margin: 0 30px;
@@ -20,6 +17,7 @@ body {
 .exp_list {
   list-style: none;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .exp_list li {
   position: relative;
@@ -34,7 +32,7 @@ body {
 .exp_list li h2 span:first-of-type {
   font-size: 18px;
   text-indent: 30px;
-  color: crimsons;
+  color: coral;
   float: left;
 }
 .exp_list li h2 span:last-of-type {
@@ -53,7 +51,7 @@ body {
   bottom: -4px;
   right: -23px;
   border-radius: 50%;
-  background-color: crimson;
+  background-color: coral;
 }
 .exp_list li h2::after {
   content: '';
@@ -66,7 +64,7 @@ body {
   content: '';
   width: 54px;
   height: 54px;
-  top: 13px;
+  top: 15px;
   left: -27px;
   border-radius: 50%;
   background-color: white;
@@ -114,8 +112,56 @@ body {
   display: block;
   width: 6px;
   height: 6px;
-  top: 16px;
+  top: 20px;
   left: -4px;
   border-radius: 50%;
   background-color: coral;
+}
+.exp_list li:first-of-type h2:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: coral;
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  border-radius: 50%;
+}
+.exp_list li:last-of-type article:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  bottom: -3px;
+  left: -4px;
+  border-radius: 50%;
+  background-color: coral;
+  z-index: 5;
+}
+.exp_list li:nth-of-type(odd) div::before {
+  background-position-x: -84px;
+}
+.exp_list li:nth-of-type(odd) article {
+  border-left-color: purple;
+}
+.exp_list li:nth-of-type(odd) article::before {
+  background-color: purple;
+}
+.exp_list li:nth-of-type(odd) article::after {
+  background-color: purple;
+}
+.exp_list li:nth-of-type(even) h2 {
+  border-left-color: purple;
+  border-bottom-color: purple;
+}
+.exp_list li:nth-of-type(even) h2 span:last-of-type::after {
+  background-color: purple;
+}
+.exp_list li:nth-of-type(even) div {
+  border-top-color: purple;
+}
+.exp_list li:nth-of-type(even) div::before {
+  background-position-x: -42px;
 }
